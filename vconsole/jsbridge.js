@@ -18,7 +18,7 @@
 	    responseCallback(responseData)
 	  })
 	  bridge.registerHandler('log', function(data, responseCallback) {
-	    console.log('Native log:', data)
+	    console.log('> ', data)
 	  })
 
 // 		bridge.callHandler('ObjC Echo', {'key':'value'}, function responseCallback(responseData) {
