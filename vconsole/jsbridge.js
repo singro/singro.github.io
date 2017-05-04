@@ -11,8 +11,8 @@
 	}
 
 	setupWebViewJavascriptBridge(function(bridge) {
-	  bridge.registerHandler('native', function(data, responseCallback) {
-	    console.log('ObjC called testJavascriptHandler with', data)
+	  bridge.registerHandler('web', function(data, responseCallback) {
+	    console.log('ObjC called web with', data)
 	    var responseData = { 'Javascript Says':'Right back atcha!' }
 	    console.log('JS responding with', responseData)
 	    responseCallback(responseData)
