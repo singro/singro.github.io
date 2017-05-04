@@ -11,14 +11,14 @@
 	}
 
 	setupWebViewJavascriptBridge(function(bridge) {
-	  bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
-	    log('ObjC called testJavascriptHandler with', data)
+	  bridge.registerHandler('native', function(data, responseCallback) {
+	    console.log('ObjC called testJavascriptHandler with', data)
 	    var responseData = { 'Javascript Says':'Right back atcha!' }
-	    log('JS responding with', responseData)
+	    console.log('JS responding with', responseData)
 	    responseCallback(responseData)
 	  })
-		bridge.callHandler('ObjC Echo', {'key':'value'}, function responseCallback(responseData) {
-			console.log("JS received response:", responseData)
-		})
+// 		bridge.callHandler('ObjC Echo', {'key':'value'}, function responseCallback(responseData) {
+// 			console.log("JS received response:", responseData)
+// 		})
 	})
 }();
