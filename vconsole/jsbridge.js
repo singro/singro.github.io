@@ -17,6 +17,10 @@
 	    console.log('JS responding with', responseData)
 	    responseCallback(responseData)
 	  })
+	  bridge.registerHandler('log', function(data, responseCallback) {
+	    console.log('Native log:', data)
+	  })
+
 // 		bridge.callHandler('ObjC Echo', {'key':'value'}, function responseCallback(responseData) {
 // 			console.log("JS received response:", responseData)
 // 		})
