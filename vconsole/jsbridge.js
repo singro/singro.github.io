@@ -1,6 +1,6 @@
 !function(){
 	function setupWebViewJavascriptBridge(callback) {
-		if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+		if (window.JSBridge) { return callback(JSBridge); }
 		if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
 		window.WVJBCallbacks = [callback];
 		var WVJBIframe = document.createElement('iframe');
